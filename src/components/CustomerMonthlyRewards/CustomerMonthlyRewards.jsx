@@ -22,7 +22,7 @@ export const CustomerMonthlyRewards = () => {
                 const rewardPoint = calculateReward(data.transactionAmount);
                 totalRewardPoints += rewardPoint;
                 noOfTransactions += 1;
-                transactions.push({ transactionDate: moment(transactionDate, 'DD/MM/YYYY').format('DD/MMM/YYY'), transactionAmount: data.transactionAmount, rewardPoint });
+                transactions.push({ transactionDate: moment(data.transactionDate, 'DD/MM/YYYY').format('MM/DD/YYYY'), transactionAmount: data.transactionAmount, rewardPoint });
             });
             customerMonthlyData.push({ customerId, name, transactions, transactionDate: month, rewardPoints: totalRewardPoints, noOfTransactions });
         }
@@ -62,12 +62,13 @@ export const CustomerMonthlyRewards = () => {
                 id: 'expander',
                 Header: 'Action',
                 Cell: ({ row }) =>
-                  <span
+                  <a
                       {...row.getToggleRowExpandedProps({
+                          style: {color: 'blue', 'text-decoration': 'underline'}
                       })}
                     >
                       {row.isExpanded ? 'Hide Details' : 'Show Details'}
-                    </span>
+                    </a>
               }
         ], [])
     return (
