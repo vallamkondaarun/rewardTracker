@@ -1,27 +1,51 @@
 [
     {
         "customerId": 1,
-        "name": "Arun kumar",
-        "transactionAmount": 120,
-        "transactionDate": "1/1/2021"
+        "name": "Virat Kohli",
+        "transactionAmount": 333,
+        "transactionDate": "1/12/2020"
     },
     {
         "customerId": 1,
-        "name": "Arun kumar",
+        "name": "Virat Kohli",
+        "transactionAmount": 100,
+        "transactionDate": "11/11/2020"
+    },
+    {
+        "customerId": 1,
+        "name": "Virat Kohli",
+        "transactionAmount": 50,
+        "transactionDate": "20/11/2020"
+    },
+    {
+        "customerId": 1,
+        "name": "Virat Kohli",
         "transactionAmount": 120,
+        "transactionDate": "2/1/2021"
+    },
+    {
+        "customerId": 1,
+        "name": "Virat Kohli",
+        "transactionAmount": 120,
+        "transactionDate": "2/1/2021"
+    },
+    {
+        "customerId": 2,
+        "name": "Rishabh Pant",
+        "transactionAmount": 236,
         "transactionDate": "2/12/2020"
     },
     {
-        "customerId": 1,
-        "name": "Arun kumar",
+        "customerId": 2,
+        "name": "Rishabh Pant",
         "transactionAmount": 236,
-        "transactionDate": "10/12/2020"
+        "transactionDate": "1/11/2020"
     },
     {
-        "customerId": 1,
-        "name": "Arun kumar",
-        "transactionAmount": 80,
-        "transactionDate": "10/11/2020"
+        "customerId": 2,
+        "name": "Rishabh Pant",
+        "transactionAmount": 400,
+        "transactionDate": "1/1/2021"
     },
     {
         "customerId": 2,
@@ -32,73 +56,19 @@
     {
         "customerId": 2,
         "name": "Rishabh Pant",
-        "transactionAmount": 236,
+        "transactionAmount": 406,
         "transactionDate": "12/1/2021"
     },
     {
         "customerId": 2,
         "name": "Rishabh Pant",
-        "transactionAmount": 200,
-        "transactionDate": "15/1/2021"
+        "transactionAmount": 36,
+        "transactionDate": "22/1/2021"
     },
     {
-        "customerId": 2,
-        "name": "Rishabh Pant",
+        "customerId": 3,
+        "name": "Arun Kumar",
         "transactionAmount": 120,
-        "transactionDate": "1/11/2020"
-    },
-    {
-        "customerId": 2,
-        "name": "Rishabh Pant",
-        "transactionAmount": 1000,
-        "transactionDate": "29/11/2020"
-    },
-    {
-        "customerId": 2,
-        "name": "Rishabh Pant",
-        "transactionAmount": 500,
-        "transactionDate": "1/12/2020"
-    },
-    {
-        "customerId": 2,
-        "name": "Rishabh Pant",
-        "transactionAmount": 500,
-        "transactionDate": "1/12/2020"
-    },
-    {
-        "customerId": 3,
-        "name": "Virat Kohil",
-        "transactionAmount": 236,
-        "transactionDate": "1/1/2021"
-    },
-    {
-        "customerId": 3,
-        "name": "Virat Kohil",
-        "transactionAmount": 236,
-        "transactionDate": "2/12/2020"
-    },
-    {
-        "customerId": 3,
-        "name": "Virat Kohil",
-        "transactionAmount": 236,
-        "transactionDate": "19/12/2020"
-    },
-    {
-        "customerId": 3,
-        "name": "Virat Kohil",
-        "transactionAmount": 400,
-        "transactionDate": "15/12/2020"
-    },
-    {
-        "customerId": 3,
-        "name": "Virat Kohil",
-        "transactionAmount": 300,
-        "transactionDate": "10/12/2020"
-    },
-    {
-        "customerId": 3,
-        "name": "Virat Kohil",
-        "transactionAmount": 40,
-        "transactionDate": "2/11/2020"
+        "transactionDate": "2/2/2020"
     }
 ]

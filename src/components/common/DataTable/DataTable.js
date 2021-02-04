@@ -1,21 +1,49 @@
 import React from "react";
-import { useTable, useFilters, useSortBy, usePagination } from 'react-table';
+import { useTable, useFilters, useSortBy, useExpanded } from 'react-table';
 
 export const DataTable = ({ columns, data }) => {
     const {
         getTableProps,
         getTableBodyProps,
         headerGroups,
-        prepareRow,
         rows,
+        prepareRow,
+        visibleColumns,
     } = useTable({
         columns,
-        data
+        data,
+        initialState: {
+            hiddenColumns: ['transactions']
+        }
     },
         useFilters,
         useSortBy,
-        usePagination
+        useExpanded
     )
+
+    
+ // Create a function that will render our row sub components
+ const renderRowSubComponent = React.useCallback(
+    ({ row }) => (
+        <table style={{ width: '100%' }}>
+        <thead>
+            <th>Transaction Date</th>
+            <th>Transaction Amount</th>
+            <th>Reward Point</th>
+        </thead>
+        <tbody>
+            {
+                row.values.transactions.map((item, i) => <tr key={i}>
+                    <td>{item.transactionDate}</td>
+                    <td>$ {item.transactionAmount}</td>
+                    <td>{item.rewardPoint} pts</td>
+                </tr>)
+            }
+        </tbody>
+    </table>
+    ),
+    []
+  )
 
     return (
         <>
@@ -45,11 +73,20 @@ export const DataTable = ({ columns, data }) => {
                     {rows.map((row, i) => {
                         prepareRow(row)
                         return (
-                            <tr {...row.getRowProps()}>
-                                {row.cells.map(cell => {
-                                    return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
-                                })}
-                            </tr>
+                            <>
+                                <tr {...row.getRowProps()}>
+                                    {row.cells.map(cell => {
+                                        return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                                    })}
+                                </tr>
+                                {row.isExpanded ? (
+                                    <tr>
+                                        <td colSpan={visibleColumns.length}>
+                                            {renderRowSubComponent({ row })}
+                                        </td>
+                                    </tr>
+                                ) : null}
+                            </>
                         )
                     })}
                 </tbody>
